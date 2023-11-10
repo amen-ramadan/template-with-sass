@@ -1,0 +1,72 @@
+/* 
+overlay
+*/
+header .logo {
+  float: right;
+}
+@media (max-width: 767px) {
+  header .logo {
+    float: right;
+  }
+}
+header .logo .composition {
+  right: auto;
+  left: 15px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  header .navbar {
+    float: right;
+  }
+}
+header .navbar li {
+  float: right;
+}
+
+@media (min-width: 992px) {
+  .services .service-box {
+    float: right;
+  }
+}
+
+@media (min-width:768px) {
+  .our-players .player-box {
+    float: right;
+  }
+}
+@media (min-width:992px) {
+  .our-players .player-box {
+    text-align: right;
+  }
+}
+
+.lorem-ipsum .lorem-box {
+  float: right;
+  margin: 1% !important;
+}
+
+footer .gallery,
+footer .info,
+footer .contact {
+  float: right;
+}
+@media (min-width:768px) {
+  footer img {
+    float: right;
+  }
+}
+
+@media (min-width:768px) {
+  .text {
+    float: right;
+  }
+}
+
+.copyright .text,
+.copyright .auther {
+  float: right;
+}
+@media (min-width:768px) {
+  .copyright .auther {
+    text-align: left;
+  }
+}

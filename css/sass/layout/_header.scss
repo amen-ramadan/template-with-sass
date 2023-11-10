@@ -1,0 +1,87 @@
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid $greyColor;
+  overflow: hidden;
+
+  .logo {
+    width: 30%;
+    float: $float-left;
+    position: relative;
+
+    @include breakpoints(mobile) {
+      width: 100%;
+      float: $float-left;
+    }
+
+    @include breakpoints(small) {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+
+  }
+
+  .navbar {
+    background-color: $redColor;
+    border-radius: 15px;
+    overflow: hidden;
+
+    @include breakpoints(medium) {
+      width: 70%;
+      float: $float-left;
+      margin-top: 1em;
+    }
+
+    @include breakpoints(small) {
+      width: 100%;
+      float: none;
+      margin-top: 30px;
+      display: block !important;
+
+    }
+
+    @include breakpoints(mobile) {
+      display: none;
+      border-radius: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      width: 20%;
+      float: $float-left;
+      font-size: 18px;
+      text-align: center;
+
+      @include breakpoints(mobile) {
+        float: none;
+        display: block;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap;
+        width: 100%;
+      }
+
+      a {
+        display: block;
+        padding: 20px 10px;
+        color: #fff;
+        text-decoration: none;
+
+        @include breakpoints(mobile) {
+          padding: 15px 0;
+        }
+
+        &:hover {
+          color: #DDD;
+        }
+      }
+    }
+
+  }
+}

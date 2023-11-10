@@ -1,0 +1,59 @@
+/* 
+overlay
+*/
+
+@mixin overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin preFixer($pro, $val, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $pro}: $val;
+  }
+
+  #{$pro}:$val;
+}
+
+@mixin keyFrames($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin breakpoints($point) {
+  @if $point ==mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $point ==small {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @else if $point ==medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  }
+
+  @else if $point ==large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

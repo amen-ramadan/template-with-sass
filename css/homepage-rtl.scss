@@ -1,0 +1,122 @@
+@import 'sass/helpers/variables.scss';
+@import 'sass/helpers/mixins';
+
+$float-left: right;
+$float-right: left;
+
+$text-right: left;
+$text-left: right;
+
+
+header {
+
+  .logo {
+    float: $float-left;
+
+    @include breakpoints(mobile) {
+      float: $float-left;
+    }
+
+    .composition {
+      right: auto;
+      left: 15px;
+    }
+
+  }
+
+  .navbar {
+    @include breakpoints(medium) {
+      float: $float-left;
+    }
+
+    li {
+      float: $float-left;
+    }
+
+  }
+}
+
+
+
+// start services
+
+.services {
+  .service-box {
+
+    @media (min-width: 992px) {
+      float: $float-left;
+    }
+  }
+
+}
+
+
+// end services
+
+// start our players
+
+.our-players {
+  .player-box {
+
+    @media #{$minSmall} {
+      float: $float-left;
+    }
+
+    @media #{$minMedium} {
+      text-align: $text-left;
+    }
+  }
+}
+
+// end our players
+
+// start lorem ipsum
+
+.lorem-ipsum {
+
+  .lorem-box {
+    float: $float-left;
+    margin: 1% !important;
+  }
+}
+
+// end lorem ipsum
+
+
+footer {
+
+  .gallery,
+  .info,
+  .contact {
+    float: $float-left;
+  }
+
+  img {
+    @media #{$minSmall} {
+      float: $float-left;
+    }
+  }
+}
+
+.text {
+  @media #{$minSmall} {
+    float: $float-left;
+  }
+
+}
+
+
+
+.copyright {
+
+  .text,
+  .auther {
+    float: $float-left;
+  }
+
+  .auther {
+    @media #{$minSmall} {
+      text-align: $text-right;
+    }
+  }
+}
